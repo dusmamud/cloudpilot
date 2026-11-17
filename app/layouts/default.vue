@@ -5,7 +5,7 @@
       <Motion :style="{ scaleX: progress }" class="h-0.5 origin-left bg-gradient-to-r from-violet-500 via-fuchsia-500 to-violet-400" aria-hidden="true" />
       <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-4 sm:h-[72px] sm:px-6">
         <NuxtLink to="/" class="flex min-h-11 shrink-0 items-center gap-2.5" aria-label="CloudPilot home">
-          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-xl font-black">C</span>
+          <LogoMark class="h-10 w-10 shrink-0" />
           <span class="whitespace-nowrap text-lg font-bold tracking-tight">CloudPilot</span>
         </NuxtLink>
         <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary">
@@ -80,7 +80,7 @@
     <footer class="bg-black text-white">
       <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-5">
         <div class="lg:col-span-2">
-          <div class="flex items-center gap-2.5"><span class="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-xl font-black">C</span><span class="text-lg font-bold">CloudPilot</span></div>
+          <div class="flex items-center gap-2.5"><LogoMark class="h-10 w-10" /><span class="text-lg font-bold">CloudPilot</span></div>
           <p class="mt-4 max-w-sm text-sm leading-relaxed text-neutral-400">Simplify. Automate. Scale your business — all in one platform. Built for modern teams that move fast.</p>
           <form class="mt-5 flex max-w-sm gap-2" @submit.prevent="subscribed = true">
             <label for="newsletter-email" class="sr-only">Work email</label>

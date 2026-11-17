@@ -52,6 +52,13 @@ body { font-family: var(--font-sans); background: #fff; color: #111; -webkit-fon
 .animate-marquee:hover { animation-play-state: paused; }
 @keyframes drawline { from { stroke-dashoffset: 320; } to { stroke-dashoffset: 0; } }
 
+/* ---- Featured-tool card backgrounds (match the reference) ----
+   The gradient is the card; the 3D object is a transparent PNG floating on it. */
+.tool-bg-flowmaster { background: linear-gradient(155deg, #c4b5fd 0%, #a78bfa 42%, #7c3aed 100%); }
+.tool-bg-insightpro { background: linear-gradient(155deg, #fbcfe8 0%, #f9a8d4 42%, #f472b6 100%); }
+.tool-bg-teamsync { background: linear-gradient(155deg, #a5b4fc 0%, #818cf8 42%, #6366f1 100%); }
+.tool-object { filter: drop-shadow(0 20px 22px rgba(0, 0, 0, 0.28)); }
+
 /* ---- Hero gradient: black -> violet, fading to pale lavender at the bottom.
    The bottom social-proof bar sits on the pale fade, so its text is DARK. ---- */
 .hero-grad { background: linear-gradient(180deg, #050505 0%, #1a0b2e 30%, #6d28d9 56%, #8b5cf6 74%, #c4b5fd 88%, #ede9fe 100%); }

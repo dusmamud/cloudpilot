@@ -55,9 +55,9 @@
           </div>
           <NuxtLink to="/features" class="btn btn-dark btn-arrow">Explore Platform <ArrowRight class="h-4 w-4" /></NuxtLink>
           <div class="flex gap-3">
-            <img src="/images/flowmaster.webp" alt="FlowMaster cloud" class="animate-floaty h-16 w-16 rounded-2xl object-cover shadow-lg sm:h-20 sm:w-20" />
-            <img src="/images/insightpro.webp" alt="InsightPro chart" class="animate-floaty h-16 w-16 rounded-2xl object-cover shadow-lg sm:h-20 sm:w-20" style="animation-delay:.6s" />
-            <img src="/images/teamsync.webp" alt="TeamSync people" class="animate-floaty h-16 w-16 rounded-2xl object-cover shadow-lg sm:h-20 sm:w-20" style="animation-delay:1.2s" />
+            <span class="tool-bg-flowmaster animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20"><img src="/images/flowmaster.png" alt="FlowMaster cloud" class="tool-object max-h-full max-w-full object-contain" /></span>
+            <span class="tool-bg-insightpro animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:.6s"><img src="/images/insightpro.png" alt="InsightPro chart" class="tool-object max-h-full max-w-full object-contain" /></span>
+            <span class="tool-bg-teamsync animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:1.2s"><img src="/images/teamsync.png" alt="TeamSync people" class="tool-object max-h-full max-w-full object-contain" /></span>
           </div>
         </Motion>
       </div>
@@ -99,7 +99,7 @@
     <!-- FEATURED TOOLS -->
     <section class="bg-neutral-50">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-        <p class="reveal inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider"><Zap class="h-3.5 w-3.5 text-violet-600" /> Featured Tools</p>
+        <p class="reveal inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider"><LayoutGrid class="h-3.5 w-3.5 text-violet-600" /> Featured Tools</p>
         <div class="mt-6 flex flex-wrap items-end justify-between gap-6">
           <h2 class="reveal max-w-xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl" style="--d:80ms">Powerful Tools<br />Built for <span class="text-grad-light">Your Business</span></h2>
           <div class="reveal" style="--d:160ms">
@@ -109,15 +109,15 @@
         </div>
         <div class="mt-10 grid gap-6 md:grid-cols-3">
           <NuxtLink to="/tools/flowmaster" class="reveal card-hover group block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5">
-            <div class="relative"><img src="/images/flowmaster.webp" alt="FlowMaster — Workflow Automation" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64" /><span class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold shadow"><Workflow class="h-3.5 w-3.5 text-violet-600" /> FlowMaster</span></div>
+            <div class="tool-bg-flowmaster relative grid aspect-square place-items-center overflow-hidden"><img src="/images/flowmaster.png" alt="FlowMaster — Workflow Automation" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><Workflow class="h-5 w-5" /> FlowMaster</span></div>
             <div class="p-5 sm:p-6"><p class="text-sm font-bold"><span class="text-violet-700">01</span> — Workflow Automation</p><p class="mt-2 text-sm leading-relaxed text-neutral-600">Automate approvals, reminders and handoffs — no code.</p></div>
           </NuxtLink>
           <NuxtLink to="/tools/insightpro" class="reveal card-hover group block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5" style="--d:100ms">
-            <div class="relative"><img src="/images/insightpro.webp" alt="InsightPro — Advanced Analytics" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64" /><span class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold shadow"><BarChart3 class="h-3.5 w-3.5 text-violet-600" /> InsightPro</span></div>
+            <div class="tool-bg-insightpro relative grid aspect-square place-items-center overflow-hidden"><img src="/images/insightpro.png" alt="InsightPro — Advanced Analytics" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><BarChart3 class="h-5 w-5" /> InsightPro</span></div>
             <div class="p-5 sm:p-6"><p class="text-sm font-bold"><span class="text-violet-700">02</span> — Advanced Analytics</p><p class="mt-2 text-sm leading-relaxed text-neutral-600">Dashboards and alerts that explain themselves.</p></div>
           </NuxtLink>
           <NuxtLink to="/tools/teamsync" class="reveal card-hover group block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5" style="--d:200ms">
-            <div class="relative"><img src="/images/teamsync.webp" alt="TeamSync — Team Collaboration" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64" /><span class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold shadow"><Users class="h-3.5 w-3.5 text-violet-600" /> TeamSync</span></div>
+            <div class="tool-bg-teamsync relative grid aspect-square place-items-center overflow-hidden"><img src="/images/teamsync.png" alt="TeamSync — Team Collaboration" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><Users class="h-5 w-5" /> TeamSync</span></div>
             <div class="p-5 sm:p-6"><p class="text-sm font-bold"><span class="text-violet-700">03</span> — Team Collaboration</p><p class="mt-2 text-sm leading-relaxed text-neutral-600">Real-time boards, comments and shared work.</p></div>
           </NuxtLink>
         </div>
