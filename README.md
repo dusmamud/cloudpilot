@@ -25,6 +25,6 @@ npm run generate   # static build to .output/public
 
 ## Deploy
 
-GitHub Actions (`.github/workflows/deploy-cloudflare-pages.yml`) deploys `.output/public` to Cloudflare Pages project `cloudpilot` (https://cloudpilot.pages.dev). Requires repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, and the Pages project created in Cloudflare.
+GitHub Actions (`.github/workflows/deploy-cloudflare-pages.yml`) deploys `.output/public` to Cloudflare Pages project `cloudpilot` (https://cloudpilot-saas.pages.dev). Requires repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, and the Pages project created in Cloudflare.
 
 All copy, prices, stats and testimonials are mock/demo data.
