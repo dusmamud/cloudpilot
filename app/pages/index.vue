@@ -2,19 +2,19 @@
   <div>
     <!-- HERO — same-to-same as reference, rebuilt mobile-first -->
     <section class="hero-grad text-white">
-      <div class="mx-auto max-w-7xl px-4 pb-8 pt-10 sm:px-6 sm:pb-10 sm:pt-16 lg:pt-20">
+      <div class="mx-auto max-w-7xl px-4 pb-6 pt-8 sm:px-6 sm:pb-8 sm:pt-12 lg:pt-14">
         <div class="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div>
             <Motion :initial="{ opacity: 0, y: 16 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.5, ease: 'easeOut' }">
-              <p class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-xs font-semibold"><Sparkles class="h-3.5 w-3.5" /> All-in-One SaaS Platform</p>
+              <p class="inline-flex items-center gap-2 text-xs font-semibold"><Sparkles class="h-3.5 w-3.5 text-pink-400" /> All-in-One SaaS Platform <Sparkles class="h-3.5 w-3.5 text-amber-400" /></p>
             </Motion>
             <Motion :initial="{ opacity: 0, y: 24 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.08, ease: 'easeOut' }">
-              <h1 class="mt-6 text-[2.6rem] font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-[4.4rem]">
-                Simplify.<br />Automate.<br /><span class="text-grad">Scale Your</span><br /><span class="text-grad">Business.</span><br />All in One Platform.
+              <h1 class="mt-6 text-[2.75rem] font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-[5rem]">
+                Simplify.<br />Automate.<br /><span class="text-grad-hero">Scale Your</span><br /><span class="text-grad-hero">Business.</span><br />All in One Platform.
               </h1>
             </Motion>
           </div>
-          <Motion :initial="{ opacity: 0, y: 24 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.18, ease: 'easeOut' }" class="lg:pt-24">
+          <Motion :initial="{ opacity: 0, y: 24 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.18, ease: 'easeOut' }">
             <p class="max-w-md text-base leading-relaxed text-violet-100 sm:text-lg">CloudPilot helps teams automate workflows, collaborate in real-time, and make data-driven decisions — faster than ever.</p>
             <div class="mt-7 flex flex-wrap items-center gap-4">
               <NuxtLink to="/request-demo" class="btn btn-white">Start Free Trial</NuxtLink>
@@ -38,13 +38,13 @@
             </AnimatePresence>
           </Motion>
         </div>
-        <!-- Bottom bar sits on the pale lavender fade: DARK text for contrast -->
-        <Motion :initial="{ opacity: 0, y: 16 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.3, ease: 'easeOut' }" class="mt-12 flex flex-wrap items-end justify-between gap-6 border-t border-black/10 pt-6 text-neutral-900 sm:mt-16">
+        <!-- Bottom bar sits on the white fade: DARK text, no divider, like the reference -->
+        <Motion :initial="{ opacity: 0, y: 16 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.3, ease: 'easeOut' }" class="mt-10 flex flex-wrap items-end justify-between gap-6 pt-2 text-neutral-900 sm:mt-12">
           <div class="flex items-center gap-3">
             <div class="flex -space-x-2">
+              <img src="/images/avatar-man1.webp" alt="Happy CloudPilot user" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
+              <img src="/images/avatar-man2.webp" alt="Happy CloudPilot user" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
               <img src="/images/hero-woman.webp" alt="Happy CloudPilot user" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
-              <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-white bg-violet-500 text-xs font-bold text-white">AK</span>
-              <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-white bg-fuchsia-500 text-xs font-bold text-white">JM</span>
             </div>
             <div>
               <p class="flex items-center gap-0.5" aria-label="Rated 5 out of 5 stars">
@@ -53,22 +53,13 @@
               <p class="mt-0.5 text-sm font-semibold"><CountUp :to="12540" suffix="+" /> happy users</p>
             </div>
           </div>
-          <NuxtLink to="/features" class="btn btn-dark btn-arrow">Explore Platform <ArrowRight class="h-4 w-4" /></NuxtLink>
+          <NuxtLink to="/features" class="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold underline decoration-neutral-400 underline-offset-4 transition hover:text-violet-700">Explore Platform <ArrowRight class="h-4 w-4" /></NuxtLink>
           <div class="flex gap-3">
             <span class="tool-bg-flowmaster animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20"><img src="/images/flowmaster.png" alt="FlowMaster cloud" class="tool-object max-h-full max-w-full object-contain" /></span>
-            <span class="tool-bg-insightpro animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:.6s"><img src="/images/insightpro.png" alt="InsightPro chart" class="tool-object max-h-full max-w-full object-contain" /></span>
-            <span class="tool-bg-teamsync animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:1.2s"><img src="/images/teamsync.png" alt="TeamSync people" class="tool-object max-h-full max-w-full object-contain" /></span>
+            <span class="tool-bg-insightpro animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:.6s"><img src="/images/cubes.png" alt="Stacked cubes" class="tool-object max-h-full max-w-full object-contain" /></span>
+            <span class="tool-bg-teamsync animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:1.2s"><img src="/images/piechart.png" alt="Pie chart" class="tool-object max-h-full max-w-full object-contain" /></span>
           </div>
         </Motion>
-      </div>
-    </section>
-
-    <!-- Integrations marquee -->
-    <section class="overflow-hidden border-b border-neutral-100 py-6" aria-label="Integrations">
-      <div class="animate-marquee flex w-max gap-3">
-        <span v-for="n in 2" :key="n" class="flex gap-3" :aria-hidden="n === 2">
-          <span v-for="t in ['Salesforce', 'Slack', 'Gmail', 'HubSpot', 'Notion', 'Stripe', 'Zoom', 'Asana', 'Zendesk', 'Shopify']" :key="t" class="rounded-full border border-neutral-200 px-5 py-2.5 text-sm font-semibold text-neutral-600">{{ t }}</span>
-        </span>
       </div>
     </section>
 

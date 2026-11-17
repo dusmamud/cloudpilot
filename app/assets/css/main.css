@@ -59,11 +59,14 @@ body { font-family: var(--font-sans); background: #fff; color: #111; -webkit-fon
 .tool-bg-teamsync { background: linear-gradient(155deg, #a5b4fc 0%, #818cf8 42%, #6366f1 100%); }
 .tool-object { filter: drop-shadow(0 20px 22px rgba(0, 0, 0, 0.28)); }
 
-/* ---- Hero gradient: black -> violet, fading to pale lavender at the bottom.
-   The bottom social-proof bar sits on the pale fade, so its text is DARK. ---- */
-.hero-grad { background: linear-gradient(180deg, #050505 0%, #1a0b2e 30%, #6d28d9 56%, #8b5cf6 74%, #c4b5fd 88%, #ede9fe 100%); }
+/* ---- Hero gradient: black -> violet, fading to WHITE at the bottom.
+   The bottom social-proof bar sits on white, so its text is DARK. ---- */
+.hero-grad { background: linear-gradient(180deg, #050505 0%, #1a0b2e 32%, #5b21b6 58%, #6d28d9 70%, #8b5cf6 80%, #c4b5fd 88%, #ede9fe 94%, #ffffff 100%); }
 /* Gradient text on DARK backgrounds (hero): light violet -> white, high contrast */
 .text-grad { background: linear-gradient(92deg, #ddd6fe, #ffffff 60%, #c4b5fd); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* Hero headline gradient: saturated violet like the reference — the pale
+   .text-grad washed out against the violet hero background. */
+.text-grad-hero { background: linear-gradient(92deg, #7c3aed 0%, #8b5cf6 45%, #a78bfa 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 /* Gradient text on LIGHT backgrounds (sections): violet-600 -> fuchsia-600 */
 .text-grad-light { background: linear-gradient(92deg, #7c3aed, #c026d3); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
