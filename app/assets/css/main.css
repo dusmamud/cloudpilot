@@ -11,13 +11,37 @@
 }
 
 html, body { overflow-x: clip; }
-body { font-family: var(--font-sans); background: #fff; color: #111; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: #fff; color: #111; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 ::selection { background: #7c3aed; color: #fff; }
 
-/* Motion system: pure CSS + IntersectionObserver, 500ms, stagger via --d */
+/* Keyboard focus must always be visible — professional a11y baseline */
+:focus-visible { outline: 2px solid #7c3aed; outline-offset: 2px; border-radius: 4px; }
+
+/* ---- Buttons: 48px minimum touch target, mobile-first ----
+   In @layer components so Tailwind utilities (e.g. max-[400px]:hidden)
+   can override them — unlayered rules would always win the cascade. */
+@layer components {
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .75rem 1.5rem; border-radius: 9999px; font-size: .875rem; font-weight: 700; line-height: 1.25rem; white-space: nowrap; transition: background-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease; cursor: pointer; }
+.btn:active { transform: scale(.98); }
+.btn-white { background: #fff; color: #050505; box-shadow: 0 10px 24px -8px rgba(0,0,0,.45); }
+.btn-white:hover { background: #ede9fe; }
+.btn-dark { background: #050505; color: #fff; box-shadow: 0 10px 24px -8px rgba(0,0,0,.45); }
+.btn-dark:hover { background: #5b21b6; }
+.btn-violet { background: #7c3aed; color: #fff; }
+.btn-violet:hover { background: #6d28d9; }
+.btn-sm { min-height: 2.75rem; padding: .5rem 1.25rem; }
+.btn-outline-light { border: 1px solid rgba(255,255,255,.45); color: #fff; }
+.btn-outline-light:hover { background: rgba(255,255,255,.12); }
+.btn-outline-dark { border: 1px solid rgba(0,0,0,.2); color: #111; }
+.btn-outline-dark:hover { background: #f5f3ff; border-color: #7c3aed; color: #5b21b6; }
+}
+
+/* ---- Motion system: CSS scroll reveals (268 usages) + Motion for hero/menu ---- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .5s ease-out, transform .5s ease-out; transition-delay: var(--d, 0ms); }
 .reveal.revealed { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
@@ -28,10 +52,21 @@ body { font-family: var(--font-sans); background: #fff; color: #111; -webkit-fon
 .animate-marquee:hover { animation-play-state: paused; }
 @keyframes drawline { from { stroke-dashoffset: 320; } to { stroke-dashoffset: 0; } }
 
-.hero-grad { background: linear-gradient(180deg, #050505 0%, #1a0b2e 34%, #6d28d9 62%, #a78bfa 82%, #ffffff 100%); }
-.text-grad { background: linear-gradient(90deg, #a78bfa, #7c3aed); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* ---- Hero gradient: black -> violet, fading to pale lavender at the bottom.
+   The bottom social-proof bar sits on the pale fade, so its text is DARK. ---- */
+.hero-grad { background: linear-gradient(180deg, #050505 0%, #1a0b2e 30%, #6d28d9 56%, #8b5cf6 74%, #c4b5fd 88%, #ede9fe 100%); }
+/* Gradient text on DARK backgrounds (hero): light violet -> white, high contrast */
+.text-grad { background: linear-gradient(92deg, #ddd6fe, #ffffff 60%, #c4b5fd); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* Gradient text on LIGHT backgrounds (sections): violet-600 -> fuchsia-600 */
+.text-grad-light { background: linear-gradient(92deg, #7c3aed, #c026d3); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
 .card-hover { transition: transform .3s ease, box-shadow .3s ease; }
 .card-hover:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -16px rgba(124,58,237,.35); }
-.btn-arrow svg { transition: transform .25s ease; }
-.btn-arrow:hover svg { transform: translateX(4px); }
+.btn-arrow svg, .btn-arrow .lucide { transition: transform .25s ease; }
+.btn-arrow:hover svg, .btn-arrow:hover .lucide { transform: translateX(4px); }
 input, select, textarea { font-size: 16px; }
+
+/* Range sliders: 44px hit area, 24px thumb */
+input[type="range"] { height: 2.75rem; width: 100%; accent-color: #7c3aed; cursor: pointer; }
+input[type="range"]::-webkit-slider-thumb { height: 24px; width: 24px; }
+input[type="range"]::-moz-range-thumb { height: 24px; width: 24px; }

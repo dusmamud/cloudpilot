@@ -2,7 +2,7 @@
   <div>
     <section class="bg-black text-white">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-        <p class="reveal inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-violet-300">Security & Trust</p>
+        <p class="reveal inline-flex items-center gap-2 rounded-full border border-white/20 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-violet-300">Security & Trust</p>
         <h1 class="reveal mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl" style="--d:80ms">Your data, <span class='text-grad'>locked down.</span></h1>
         <p class="reveal mt-5 max-w-2xl text-base leading-relaxed text-neutral-300 sm:text-lg" style="--d:160ms">Security is not a feature tier at CloudPilot. Encryption, access controls and audit logs ship on every plan.</p>
         <div class="reveal mt-8 flex flex-wrap gap-3" style="--d:240ms">
