@@ -17,6 +17,9 @@
               <Motion v-if="open === 'product'" :initial="{ opacity: 0, y: 8 }" :animate="{ opacity: 1, y: 0 }" :exit="{ opacity: 0, y: 8 }" :transition="{ duration: 0.18, ease: 'easeOut' }" class="absolute left-0 top-full w-72 rounded-2xl bg-white p-2 text-neutral-900 shadow-2xl ring-1 ring-black/5">
                 <NuxtLink to="/features" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Features</span><span class="block text-sm text-neutral-500">Everything in one platform</span></NuxtLink>
                 <NuxtLink to="/tools" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Tools</span><span class="block text-sm text-neutral-500">FlowMaster, InsightPro, TeamSync</span></NuxtLink>
+                <NuxtLink to="/product-tour" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Product tour</span><span class="block text-sm text-neutral-500">Click through it, no account needed</span></NuxtLink>
+                <NuxtLink to="/templates" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Templates</span><span class="block text-sm text-neutral-500">Ready-made workflows and boards</span></NuxtLink>
+                <NuxtLink to="/developers" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Developers</span><span class="block text-sm text-neutral-500">API, webhooks and SDKs</span></NuxtLink>
                 <NuxtLink to="/integrations" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Integrations</span><span class="block text-sm text-neutral-500">100+ tools, one click</span></NuxtLink>
                 <NuxtLink to="/security" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Security</span><span class="block text-sm text-neutral-500">SOC 2, GDPR, SSO</span></NuxtLink>
               </Motion>
@@ -29,6 +32,7 @@
             <AnimatePresence>
               <Motion v-if="open === 'solutions'" :initial="{ opacity: 0, y: 8 }" :animate="{ opacity: 1, y: 0 }" :exit="{ opacity: 0, y: 8 }" :transition="{ duration: 0.18, ease: 'easeOut' }" class="absolute left-0 top-full w-72 rounded-2xl bg-white p-2 text-neutral-900 shadow-2xl ring-1 ring-black/5">
                 <NuxtLink to="/solutions" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">All solutions</span><span class="block text-sm text-neutral-500">By team and company size</span></NuxtLink>
+                <NuxtLink to="/use-cases" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Use cases</span><span class="block text-sm text-neutral-500">Projects, marketing, sales</span></NuxtLink>
                 <NuxtLink to="/solutions/startups" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">For Startups</span><span class="block text-sm text-neutral-500">Ship fast, stay lean</span></NuxtLink>
                 <NuxtLink to="/solutions/teams" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">For Teams</span><span class="block text-sm text-neutral-500">Collaborate in real-time</span></NuxtLink>
                 <NuxtLink to="/solutions/enterprise" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">For Enterprise</span><span class="block text-sm text-neutral-500">Scale with control</span></NuxtLink>
@@ -46,14 +50,18 @@
                 <NuxtLink to="/customers" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Customers</span><span class="block text-sm text-neutral-500">Case studies that shipped</span></NuxtLink>
                 <NuxtLink to="/help" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Help Center</span><span class="block text-sm text-neutral-500">Answers in minutes</span></NuxtLink>
                 <NuxtLink to="/changelog" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Changelog</span><span class="block text-sm text-neutral-500">What is new in CloudPilot</span></NuxtLink>
+                <NuxtLink to="/faq" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">FAQ</span><span class="block text-sm text-neutral-500">Questions, answered</span></NuxtLink>
+                <NuxtLink to="/trust-center" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Trust Center</span><span class="block text-sm text-neutral-500">Compliance, uptime, subprocessors</span></NuxtLink>
+                <NuxtLink to="/status" class="block rounded-xl px-4 py-3 transition hover:bg-violet-50"><span class="block font-semibold">Status</span><span class="block text-sm text-neutral-500">Live service health</span></NuxtLink>
               </Motion>
             </AnimatePresence>
           </div>
           <NuxtLink to="/about" class="flex min-h-11 items-center rounded-full px-4 text-sm font-medium transition hover:bg-white/10">Company</NuxtLink>
         </nav>
         <div class="flex items-center gap-2">
+          <CommandPalette ref="palette" show-button />
           <NuxtLink to="/login" class="hidden min-h-11 items-center rounded-full px-4 text-sm font-medium transition hover:bg-white/10 sm:flex">Sign in</NuxtLink>
-          <NuxtLink to="/request-demo" class="btn btn-outline-light btn-sm max-[400px]:hidden">Get Started</NuxtLink>
+          <NuxtLink to="/signup" class="btn btn-outline-light btn-sm max-[400px]:hidden">Get Started</NuxtLink>
           <button class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white text-black transition hover:bg-violet-100 lg:hidden" :aria-expanded="mobile" aria-controls="mobile-menu" aria-label="Toggle menu" @click="mobile = !mobile">
             <component :is="mobile ? X : Menu" class="h-5 w-5" />
           </button>
@@ -70,8 +78,11 @@
             <NuxtLink to="/customers" class="flex min-h-12 items-center rounded-xl px-3 transition hover:bg-white/10" @click="mobile = false">Customers</NuxtLink>
             <NuxtLink to="/about" class="flex min-h-12 items-center rounded-xl px-3 transition hover:bg-white/10" @click="mobile = false">Company</NuxtLink>
             <NuxtLink to="/help" class="flex min-h-12 items-center rounded-xl px-3 transition hover:bg-white/10" @click="mobile = false">Help Center</NuxtLink>
+            <NuxtLink to="/product-tour" class="flex min-h-12 items-center rounded-xl px-3 transition hover:bg-white/10" @click="mobile = false">Product tour</NuxtLink>
+            <NuxtLink to="/faq" class="flex min-h-12 items-center rounded-xl px-3 transition hover:bg-white/10" @click="mobile = false">FAQ</NuxtLink>
+            <button class="flex min-h-12 w-full items-center gap-2 rounded-xl px-3 text-left transition hover:bg-white/10" @click="mobile = false; palette?.openPalette()"><Search class="h-4 w-4" /> Search pages <kbd class="ml-auto rounded-md bg-white/10 px-1.5 py-0.5 text-[11px] font-bold">⌘K</kbd></button>
             <NuxtLink to="/login" class="flex min-h-12 items-center rounded-xl px-3 transition hover:bg-white/10" @click="mobile = false">Sign in</NuxtLink>
-            <NuxtLink to="/request-demo" class="btn btn-violet mt-2 w-full" @click="mobile = false">Get Started <ArrowRight class="h-4 w-4" /></NuxtLink>
+            <NuxtLink to="/signup" class="btn btn-violet mt-2 w-full" @click="mobile = false">Get Started <ArrowRight class="h-4 w-4" /></NuxtLink>
           </nav>
         </Motion>
       </AnimatePresence>
@@ -89,12 +100,17 @@
           </form>
           <p v-if="subscribed" class="mt-2 flex items-center gap-1.5 text-sm text-emerald-400"><CheckCircle2 class="h-4 w-4" /> Thanks — you are on the list. Demo data only.</p>
         </div>
-        <nav aria-label="Product"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Product</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/features" class="flex min-h-11 items-center hover:text-violet-300">Features</NuxtLink></li><li><NuxtLink to="/tools" class="flex min-h-11 items-center hover:text-violet-300">Tools</NuxtLink></li><li><NuxtLink to="/pricing" class="flex min-h-11 items-center hover:text-violet-300">Pricing</NuxtLink></li><li><NuxtLink to="/integrations" class="flex min-h-11 items-center hover:text-violet-300">Integrations</NuxtLink></li><li><NuxtLink to="/changelog" class="flex min-h-11 items-center hover:text-violet-300">Changelog</NuxtLink></li></ul></nav>
+        <nav aria-label="Product"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Product</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/features" class="flex min-h-11 items-center hover:text-violet-300">Features</NuxtLink></li><li><NuxtLink to="/tools" class="flex min-h-11 items-center hover:text-violet-300">Tools</NuxtLink></li><li><NuxtLink to="/pricing" class="flex min-h-11 items-center hover:text-violet-300">Pricing</NuxtLink></li><li><NuxtLink to="/integrations" class="flex min-h-11 items-center hover:text-violet-300">Integrations</NuxtLink></li><li><NuxtLink to="/product-tour" class="flex min-h-11 items-center hover:text-violet-300">Product tour</NuxtLink></li><li><NuxtLink to="/templates" class="flex min-h-11 items-center hover:text-violet-300">Templates</NuxtLink></li><li><NuxtLink to="/developers" class="flex min-h-11 items-center hover:text-violet-300">Developers</NuxtLink></li><li><NuxtLink to="/changelog" class="flex min-h-11 items-center hover:text-violet-300">Changelog</NuxtLink></li></ul></nav>
         <nav aria-label="Company"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Company</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/about" class="flex min-h-11 items-center hover:text-violet-300">About</NuxtLink></li><li><NuxtLink to="/customers" class="flex min-h-11 items-center hover:text-violet-300">Customers</NuxtLink></li><li><NuxtLink to="/careers" class="flex min-h-11 items-center hover:text-violet-300">Careers</NuxtLink></li><li><NuxtLink to="/blog" class="flex min-h-11 items-center hover:text-violet-300">Blog</NuxtLink></li><li><NuxtLink to="/contact" class="flex min-h-11 items-center hover:text-violet-300">Contact</NuxtLink></li></ul></nav>
-        <nav aria-label="Resources"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Resources</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/help" class="flex min-h-11 items-center hover:text-violet-300">Help Center</NuxtLink></li><li><NuxtLink to="/resources" class="flex min-h-11 items-center hover:text-violet-300">Resources</NuxtLink></li><li><NuxtLink to="/roi-calculator" class="flex min-h-11 items-center hover:text-violet-300">ROI Calculator</NuxtLink></li><li><NuxtLink to="/compare" class="flex min-h-11 items-center hover:text-violet-300">Compare</NuxtLink></li><li><NuxtLink to="/security" class="flex min-h-11 items-center hover:text-violet-300">Security</NuxtLink></li></ul></nav>
+        <nav aria-label="Resources"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Resources</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/help" class="flex min-h-11 items-center hover:text-violet-300">Help Center</NuxtLink></li><li><NuxtLink to="/resources" class="flex min-h-11 items-center hover:text-violet-300">Resources</NuxtLink></li><li><NuxtLink to="/roi-calculator" class="flex min-h-11 items-center hover:text-violet-300">ROI Calculator</NuxtLink></li><li><NuxtLink to="/compare" class="flex min-h-11 items-center hover:text-violet-300">Compare</NuxtLink></li><li><NuxtLink to="/faq" class="flex min-h-11 items-center hover:text-violet-300">FAQ</NuxtLink></li><li><NuxtLink to="/trust-center" class="flex min-h-11 items-center hover:text-violet-300">Trust Center</NuxtLink></li><li><NuxtLink to="/status" class="flex min-h-11 items-center hover:text-violet-300">Status</NuxtLink></li><li><NuxtLink to="/security" class="flex min-h-11 items-center hover:text-violet-300">Security</NuxtLink></li></ul></nav>
       </div>
       <div class="border-t border-white/10"><div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-xs text-neutral-400 sm:px-6"><span>© 2026 CloudPilot. Demo site — all copy, prices and testimonials are mock data.</span><span class="flex items-center gap-4"><NuxtLink to="/privacy-policy" class="flex min-h-11 items-center hover:text-white">Privacy</NuxtLink><NuxtLink to="/terms" class="flex min-h-11 items-center hover:text-white">Terms</NuxtLink><NuxtLink to="/cookie-policy" class="flex min-h-11 items-center hover:text-white">Cookies</NuxtLink><NuxtLink to="/sitemap" class="flex min-h-11 items-center hover:text-white">Sitemap</NuxtLink></span></div></div>
     </footer>
+    <AnimatePresence>
+      <Motion v-if="showTop" :initial="{ opacity: 0, y: 12 }" :animate="{ opacity: 1, y: 0 }" :exit="{ opacity: 0, y: 12 }" :transition="{ duration: 0.2, ease: 'easeOut' }" class="fixed bottom-6 right-6 z-40">
+        <button class="grid h-12 w-12 place-items-center rounded-full bg-violet-600 text-white shadow-xl transition hover:bg-violet-700" aria-label="Back to top" @click="toTop"><ArrowUp class="h-5 w-5" /></button>
+      </Motion>
+    </AnimatePresence>
   </div>
 </template>
 <script setup lang="ts">
@@ -102,6 +118,8 @@ import { Menu, X } from '@lucide/vue'
 
 const open = ref('')
 const mobile = ref(false)
+const showTop = ref(false)
+const palette = ref<{ openPalette: () => void } | null>(null)
 const email = ref('')
 const subscribed = ref(false)
 const scrolled = ref(false)
@@ -111,7 +129,8 @@ const route = useRoute()
 const { scrollYProgress } = useScroll()
 const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.4 })
 
-const onScroll = () => { scrolled.value = window.scrollY > 8 }
+const onScroll = () => { scrolled.value = window.scrollY > 8; showTop.value = window.scrollY > 600 }
+const toTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { open.value = ''; mobile.value = false } }
 const onDocClick = (e: MouseEvent) => { if (!(e.target as HTMLElement).closest('header nav')) open.value = '' }
 

@@ -8,21 +8,22 @@
             <Motion :initial="{ opacity: 0, y: 16 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.5, ease: 'easeOut' }">
               <p class="inline-flex items-center gap-2 text-xs font-semibold"><Sparkles class="h-3.5 w-3.5 text-pink-400" /> All-in-One SaaS Platform <Sparkles class="h-3.5 w-3.5 text-amber-400" /></p>
             </Motion>
-            <Motion :initial="{ opacity: 0, y: 24 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.08, ease: 'easeOut' }">
+            <Motion :initial="{ opacity: 0, y: 24 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.45, delay: 0.08, ease: 'easeOut' }">
               <h1 class="mt-6 text-[2.75rem] font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-[5rem]">
                 Simplify.<br />Automate.<br /><span class="text-grad-hero">Scale Your</span><br /><span class="text-grad-hero">Business.</span><br />All in One Platform.
               </h1>
             </Motion>
           </div>
-          <Motion :initial="{ opacity: 0, y: 24 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.18, ease: 'easeOut' }">
+          <Motion :initial="{ opacity: 0, y: 24 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.45, delay: 0.16, ease: 'easeOut' }">
             <p class="max-w-md text-base leading-relaxed text-violet-100 sm:text-lg">CloudPilot helps teams automate workflows, collaborate in real-time, and make data-driven decisions — faster than ever.</p>
             <div class="mt-7 flex flex-wrap items-center gap-4">
-              <NuxtLink to="/request-demo" class="btn btn-white">Start Free Trial</NuxtLink>
+              <NuxtLink to="/signup" class="btn btn-white">Start Free Trial</NuxtLink>
               <button class="flex min-h-12 items-center gap-2.5 text-sm font-semibold transition hover:text-violet-200" :aria-expanded="showDemo" @click="showDemo = !showDemo">
                 Watch Demo
                 <span class="grid h-10 w-10 place-items-center rounded-full border border-white/50"><Play class="h-4 w-4 fill-white" /></span>
               </button>
             </div>
+            <p class="mt-4 text-xs font-medium text-violet-200">Free 14-day trial · No credit card · Cancel anytime</p>
             <AnimatePresence>
               <Motion v-if="showDemo" :initial="{ height: 0, opacity: 0 }" :animate="{ height: 'auto', opacity: 1 }" :exit="{ height: 0, opacity: 0 }" :transition="{ duration: 0.3, ease: 'easeInOut' }" class="overflow-hidden">
                 <div class="mt-6 rounded-2xl bg-black/60 p-5 text-sm leading-relaxed text-violet-100">
@@ -39,7 +40,7 @@
           </Motion>
         </div>
         <!-- Bottom bar sits on the white fade: DARK text, no divider, like the reference -->
-        <Motion :initial="{ opacity: 0, y: 16 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.6, delay: 0.3, ease: 'easeOut' }" class="mt-10 flex flex-wrap items-end justify-between gap-6 pt-2 text-neutral-900 sm:mt-12">
+        <Motion :initial="{ opacity: 0, y: 16 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.45, delay: 0.24, ease: 'easeOut' }" class="mt-10 flex flex-wrap items-end justify-between gap-6 pt-2 text-neutral-900 sm:mt-12">
           <div class="flex items-center gap-3">
             <div class="flex -space-x-2">
               <img src="/images/avatar-man1.webp" alt="Happy CloudPilot user" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
@@ -157,7 +158,7 @@
         <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Simplify. Automate. <span class="text-grad">Scale.</span></h2>
         <p class="mx-auto mt-3 max-w-xl text-neutral-300">Join 12,540+ teams on CloudPilot. Free for 14 days, no credit card required.</p>
         <div class="mt-7 flex flex-wrap justify-center gap-3">
-          <NuxtLink to="/request-demo" class="btn btn-white">Start Free Trial</NuxtLink>
+          <NuxtLink to="/signup" class="btn btn-white">Start Free Trial</NuxtLink>
           <NuxtLink to="/pricing" class="btn btn-outline-light">See Pricing</NuxtLink>
         </div>
       </div>

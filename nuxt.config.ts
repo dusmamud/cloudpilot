@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   nitro: { prerender: { autoSubfolderIndex: false } },
   routeRules: { '/**': { prerender: true } },
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'CloudPilot — Simplify. Automate. Scale Your Business.',
       htmlAttrs: { lang: 'en' },
