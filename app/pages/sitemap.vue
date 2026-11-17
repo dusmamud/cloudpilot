@@ -1,0 +1,7 @@
+<template><div class="mx-auto max-w-4xl px-4 py-16 sm:px-6"><h1 class="text-3xl font-extrabold">Sitemap</h1><p class="mt-2 text-sm text-neutral-600">Every page on this demo site.</p><div class="mt-8 grid gap-2 sm:grid-cols-2">
+<NuxtLink v-for="l in links" :key="l" :to="l" class="rounded-xl border border-neutral-200 px-4 py-3 text-sm font-medium hover:border-violet-400 hover:text-violet-700">{{l}}</NuxtLink>
+</div></div></template>
+<script setup lang="ts">
+useSeoMeta({title:'Sitemap — CloudPilot',description:'All CloudPilot pages.'})
+const links=['/','/features','/pricing','/how-it-works','/about','/contact','/request-demo','/login','/tools','/tools/flowmaster','/tools/insightpro','/tools/teamsync','/solutions','/solutions/startups','/solutions/teams','/solutions/enterprise','/customers','/customers/nimbus','/customers/fieldset','/customers/loopwork','/integrations','/security','/compare','/changelog','/resources','/roi-calculator','/help','/careers','/blog','/blog/automate-workflows','/blog/data-driven-decisions','/blog/remote-team-collaboration','/privacy-policy','/terms','/cookie-policy','/sitemap']
+</script>
