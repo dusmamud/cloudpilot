@@ -21,13 +21,17 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'CloudPilot — All-in-One SaaS Platform' },
         { property: 'og:description', content: 'Simplify. Automate. Scale Your Business. All in One Platform.' },
         { property: 'og:type', content: 'website' },
-        { name: 'twitter:card', content: 'summary_large_image' }
+        { property: 'og:image', content: 'https://cloudpilot-saas.pages.dev/og-image.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://cloudpilot-saas.pages.dev/og-image.png' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap' }
+        // Self-hosted Inter (public/fonts/inter-var.woff2) — preloaded so the
+        // headline font is requested with the HTML, not after a stylesheet.
+        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }
       ],
       script: [{ type: 'application/ld+json', innerHTML: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CloudPilot","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"12540"}}' }]
     }

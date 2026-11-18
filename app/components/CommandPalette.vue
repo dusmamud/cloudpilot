@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-if="showButton" class="hidden min-h-11 items-center gap-2 rounded-full border border-white/20 px-3.5 text-sm text-neutral-300 transition hover:bg-white/10 hover:text-white md:flex" aria-label="Search pages" @click="openPalette">
+    <button v-if="showButton" class="hidden min-h-11 items-center gap-2 rounded-full border border-white/20 px-3.5 text-sm text-neutral-300 transition hover:bg-white/10 hover:text-white md:flex" aria-label="Search ⌘K" @click="openPalette">
       <Search class="h-4 w-4" /><span class="hidden xl:inline">Search</span><kbd class="rounded-md bg-white/10 px-1.5 py-0.5 text-[11px] font-bold">⌘K</kbd>
     </button>
     <AnimatePresence>
@@ -8,7 +8,7 @@
         <Motion :initial="{ opacity: 0, y: -12, scale: 0.98 }" :animate="{ opacity: 1, y: 0, scale: 1 }" :exit="{ opacity: 0, y: -12, scale: 0.98 }" :transition="{ duration: 0.2, ease: 'easeOut' }" class="mx-auto mt-24 w-[calc(100%-2rem)] max-w-xl overflow-hidden rounded-2xl bg-white shadow-2xl" @click.stop>
           <div class="flex items-center gap-3 border-b border-neutral-100 px-4">
             <Search class="h-5 w-5 shrink-0 text-neutral-400" />
-            <input ref="inputEl" v-model="q" type="text" placeholder="Search pages, tools, docs…" class="h-14 flex-1 text-base outline-none placeholder:text-neutral-400" aria-label="Search pages" @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)" @keydown.enter.prevent="go" @keydown.esc="close" />
+            <input ref="inputEl" v-model="q" type="text" placeholder="Search pages, tools, docs…" class="h-14 flex-1 text-base text-neutral-900 outline-none placeholder:text-neutral-400" aria-label="Search pages" @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)" @keydown.enter.prevent="go" @keydown.esc="close" />
             <kbd class="rounded-md bg-neutral-100 px-2 py-1 text-[11px] font-bold text-neutral-500">ESC</kbd>
           </div>
           <ul v-if="results.length" class="max-h-80 overflow-y-auto p-2" role="listbox" aria-label="Results">

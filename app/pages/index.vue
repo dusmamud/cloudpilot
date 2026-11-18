@@ -43,12 +43,12 @@
         <Motion :initial="{ opacity: 0, y: 16 }" :animate="{ opacity: 1, y: 0 }" :transition="{ duration: 0.45, delay: 0.24, ease: 'easeOut' }" class="mt-10 flex flex-wrap items-end justify-between gap-6 pt-2 text-neutral-900 sm:mt-12">
           <div class="flex items-center gap-3">
             <div class="flex -space-x-2">
-              <img src="/images/avatar-man1.webp" alt="Happy CloudPilot user" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
-              <img src="/images/avatar-man2.webp" alt="Happy CloudPilot user" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
-              <img src="/images/hero-woman.webp" alt="Happy CloudPilot user" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
+              <img src="/images/avatar-man1.webp" alt="Happy CloudPilot user" width="96" height="96" decoding="async" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
+              <img src="/images/avatar-man2.webp" alt="Happy CloudPilot user" width="96" height="96" decoding="async" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
+              <img src="/images/hero-woman.webp" alt="Happy CloudPilot user" width="128" height="128" decoding="async" class="h-11 w-11 rounded-full border-2 border-white object-cover" />
             </div>
             <div>
-              <p class="flex items-center gap-0.5" aria-label="Rated 5 out of 5 stars">
+              <p class="flex items-center gap-0.5" role="img" aria-label="Rated 5 out of 5 stars">
                 <Star v-for="n in 5" :key="n" class="h-4 w-4 fill-amber-400 text-amber-400" />
               </p>
               <p class="mt-0.5 text-sm font-semibold"><CountUp :to="12540" suffix="+" /> happy users</p>
@@ -56,9 +56,9 @@
           </div>
           <NuxtLink to="/features" class="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold underline decoration-neutral-400 underline-offset-4 transition hover:text-violet-700">Explore Platform <ArrowRight class="h-4 w-4" /></NuxtLink>
           <div class="flex gap-3">
-            <span class="tool-bg-flowmaster animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20"><img src="/images/flowmaster.png" alt="FlowMaster cloud" class="tool-object max-h-full max-w-full object-contain" /></span>
-            <span class="tool-bg-insightpro animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:.6s"><img src="/images/cubes.png" alt="Stacked cubes" class="tool-object max-h-full max-w-full object-contain" /></span>
-            <span class="tool-bg-teamsync animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:1.2s"><img src="/images/piechart.png" alt="Pie chart" class="tool-object max-h-full max-w-full object-contain" /></span>
+            <span class="tool-bg-flowmaster animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20"><img src="/images/flowmaster.webp" alt="FlowMaster cloud" width="800" height="599" decoding="async" class="tool-object max-h-full max-w-full object-contain" /></span>
+            <span class="tool-bg-insightpro animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:.6s"><img src="/images/cubes.webp" alt="Stacked cubes" width="800" height="777" decoding="async" class="tool-object max-h-full max-w-full object-contain" /></span>
+            <span class="tool-bg-teamsync animate-floaty grid h-16 w-16 place-items-center rounded-2xl p-1.5 shadow-lg sm:h-20 sm:w-20" style="animation-delay:1.2s"><img src="/images/piechart.webp" alt="Pie chart" width="800" height="703" decoding="async" class="tool-object max-h-full max-w-full object-contain" /></span>
           </div>
         </Motion>
       </div>
@@ -73,7 +73,7 @@
       </div>
       <div class="mt-12 grid gap-10 lg:grid-cols-2">
         <div class="reveal flex items-start gap-4">
-          <img src="/images/hero-woman.webp" alt="CloudPilot customer" class="h-16 w-16 shrink-0 rounded-full object-cover" />
+          <img src="/images/hero-woman.webp" alt="CloudPilot customer" width="128" height="128" loading="lazy" decoding="async" class="h-16 w-16 shrink-0 rounded-full object-cover" />
           <p class="max-w-xs text-sm leading-relaxed text-neutral-600">Everything you need to manage and grow your business in one place.</p>
         </div>
         <div class="reveal" style="--d:120ms">
@@ -101,15 +101,15 @@
         </div>
         <div class="mt-10 grid gap-6 md:grid-cols-3">
           <NuxtLink to="/tools/flowmaster" class="reveal card-hover group block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5">
-            <div class="tool-bg-flowmaster relative grid aspect-square place-items-center overflow-hidden"><img src="/images/flowmaster.png" alt="FlowMaster — Workflow Automation" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><Workflow class="h-5 w-5" /> FlowMaster</span></div>
+            <div class="tool-bg-flowmaster relative grid aspect-square place-items-center overflow-hidden"><img src="/images/flowmaster.webp" alt="FlowMaster — Workflow Automation" width="800" height="599" loading="lazy" decoding="async" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><Workflow class="h-5 w-5" /> FlowMaster</span></div>
             <div class="p-5 sm:p-6"><p class="text-sm font-bold"><span class="text-violet-700">01</span> — Workflow Automation</p><p class="mt-2 text-sm leading-relaxed text-neutral-600">Automate approvals, reminders and handoffs — no code.</p></div>
           </NuxtLink>
           <NuxtLink to="/tools/insightpro" class="reveal card-hover group block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5" style="--d:100ms">
-            <div class="tool-bg-insightpro relative grid aspect-square place-items-center overflow-hidden"><img src="/images/insightpro.png" alt="InsightPro — Advanced Analytics" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><BarChart3 class="h-5 w-5" /> InsightPro</span></div>
+            <div class="tool-bg-insightpro relative grid aspect-square place-items-center overflow-hidden"><img src="/images/insightpro.webp" alt="InsightPro — Advanced Analytics" width="800" height="769" loading="lazy" decoding="async" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><BarChart3 class="h-5 w-5" /> InsightPro</span></div>
             <div class="p-5 sm:p-6"><p class="text-sm font-bold"><span class="text-violet-700">02</span> — Advanced Analytics</p><p class="mt-2 text-sm leading-relaxed text-neutral-600">Dashboards and alerts that explain themselves.</p></div>
           </NuxtLink>
           <NuxtLink to="/tools/teamsync" class="reveal card-hover group block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5" style="--d:200ms">
-            <div class="tool-bg-teamsync relative grid aspect-square place-items-center overflow-hidden"><img src="/images/teamsync.png" alt="TeamSync — Team Collaboration" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><Users class="h-5 w-5" /> TeamSync</span></div>
+            <div class="tool-bg-teamsync relative grid aspect-square place-items-center overflow-hidden"><img src="/images/teamsync.webp" alt="TeamSync — Team Collaboration" width="800" height="757" loading="lazy" decoding="async" class="tool-object w-4/5 transition duration-500 group-hover:scale-105" /><span class="absolute bottom-4 left-4 inline-flex items-center gap-2 text-base font-bold text-white drop-shadow-md"><Users class="h-5 w-5" /> TeamSync</span></div>
             <div class="p-5 sm:p-6"><p class="text-sm font-bold"><span class="text-violet-700">03</span> — Team Collaboration</p><p class="mt-2 text-sm leading-relaxed text-neutral-600">Real-time boards, comments and shared work.</p></div>
           </NuxtLink>
         </div>
@@ -128,7 +128,7 @@
       </div>
       <div class="mt-14 grid gap-5 md:grid-cols-3">
         <blockquote v-for="(q, i) in quotes" :key="q.n" class="reveal rounded-3xl bg-violet-50 p-6" :style="`--d:${i * 90}ms`">
-          <p class="flex items-center gap-0.5" :aria-label="`Rated 5 out of 5 by ${q.n}`">
+          <p class="flex items-center gap-0.5" role="img" :aria-label="`Rated 5 out of 5 by ${q.n}`">
             <Star v-for="n in 5" :key="n" class="h-4 w-4 fill-amber-400 text-amber-400" />
           </p>
           <p class="mt-3 text-sm leading-relaxed">“{{ q.t }}”</p>

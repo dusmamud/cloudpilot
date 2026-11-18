@@ -59,7 +59,7 @@
           <NuxtLink to="/about" class="flex min-h-11 items-center rounded-full px-4 text-sm font-medium transition hover:bg-white/10">Company</NuxtLink>
         </nav>
         <div class="flex items-center gap-2">
-          <CommandPalette ref="palette" show-button />
+          <LazyCommandPalette ref="palette" show-button />
           <NuxtLink to="/login" class="hidden min-h-11 items-center rounded-full px-4 text-sm font-medium transition hover:bg-white/10 sm:flex">Sign in</NuxtLink>
           <NuxtLink to="/signup" class="btn btn-outline-light btn-sm max-[400px]:hidden">Get Started</NuxtLink>
           <button class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white text-black transition hover:bg-violet-100 lg:hidden" :aria-expanded="mobile" aria-controls="mobile-menu" aria-label="Toggle menu" @click="mobile = !mobile">
@@ -100,9 +100,9 @@
           </form>
           <p v-if="subscribed" class="mt-2 flex items-center gap-1.5 text-sm text-emerald-400"><CheckCircle2 class="h-4 w-4" /> Thanks — you are on the list. Demo data only.</p>
         </div>
-        <nav aria-label="Product"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Product</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/features" class="flex min-h-11 items-center hover:text-violet-300">Features</NuxtLink></li><li><NuxtLink to="/tools" class="flex min-h-11 items-center hover:text-violet-300">Tools</NuxtLink></li><li><NuxtLink to="/pricing" class="flex min-h-11 items-center hover:text-violet-300">Pricing</NuxtLink></li><li><NuxtLink to="/integrations" class="flex min-h-11 items-center hover:text-violet-300">Integrations</NuxtLink></li><li><NuxtLink to="/product-tour" class="flex min-h-11 items-center hover:text-violet-300">Product tour</NuxtLink></li><li><NuxtLink to="/templates" class="flex min-h-11 items-center hover:text-violet-300">Templates</NuxtLink></li><li><NuxtLink to="/developers" class="flex min-h-11 items-center hover:text-violet-300">Developers</NuxtLink></li><li><NuxtLink to="/changelog" class="flex min-h-11 items-center hover:text-violet-300">Changelog</NuxtLink></li></ul></nav>
-        <nav aria-label="Company"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Company</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/about" class="flex min-h-11 items-center hover:text-violet-300">About</NuxtLink></li><li><NuxtLink to="/customers" class="flex min-h-11 items-center hover:text-violet-300">Customers</NuxtLink></li><li><NuxtLink to="/careers" class="flex min-h-11 items-center hover:text-violet-300">Careers</NuxtLink></li><li><NuxtLink to="/blog" class="flex min-h-11 items-center hover:text-violet-300">Blog</NuxtLink></li><li><NuxtLink to="/contact" class="flex min-h-11 items-center hover:text-violet-300">Contact</NuxtLink></li></ul></nav>
-        <nav aria-label="Resources"><h3 class="text-sm font-bold uppercase tracking-wider text-neutral-400">Resources</h3><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/help" class="flex min-h-11 items-center hover:text-violet-300">Help Center</NuxtLink></li><li><NuxtLink to="/resources" class="flex min-h-11 items-center hover:text-violet-300">Resources</NuxtLink></li><li><NuxtLink to="/roi-calculator" class="flex min-h-11 items-center hover:text-violet-300">ROI Calculator</NuxtLink></li><li><NuxtLink to="/compare" class="flex min-h-11 items-center hover:text-violet-300">Compare</NuxtLink></li><li><NuxtLink to="/faq" class="flex min-h-11 items-center hover:text-violet-300">FAQ</NuxtLink></li><li><NuxtLink to="/trust-center" class="flex min-h-11 items-center hover:text-violet-300">Trust Center</NuxtLink></li><li><NuxtLink to="/status" class="flex min-h-11 items-center hover:text-violet-300">Status</NuxtLink></li><li><NuxtLink to="/security" class="flex min-h-11 items-center hover:text-violet-300">Security</NuxtLink></li></ul></nav>
+        <nav aria-label="Product"><p class="text-sm font-bold uppercase tracking-wider text-neutral-400">Product</p><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/features" class="flex min-h-11 items-center hover:text-violet-300">Features</NuxtLink></li><li><NuxtLink to="/tools" class="flex min-h-11 items-center hover:text-violet-300">Tools</NuxtLink></li><li><NuxtLink to="/pricing" class="flex min-h-11 items-center hover:text-violet-300">Pricing</NuxtLink></li><li><NuxtLink to="/integrations" class="flex min-h-11 items-center hover:text-violet-300">Integrations</NuxtLink></li><li><NuxtLink to="/product-tour" class="flex min-h-11 items-center hover:text-violet-300">Product tour</NuxtLink></li><li><NuxtLink to="/templates" class="flex min-h-11 items-center hover:text-violet-300">Templates</NuxtLink></li><li><NuxtLink to="/developers" class="flex min-h-11 items-center hover:text-violet-300">Developers</NuxtLink></li><li><NuxtLink to="/changelog" class="flex min-h-11 items-center hover:text-violet-300">Changelog</NuxtLink></li></ul></nav>
+        <nav aria-label="Company"><p class="text-sm font-bold uppercase tracking-wider text-neutral-400">Company</p><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/about" class="flex min-h-11 items-center hover:text-violet-300">About</NuxtLink></li><li><NuxtLink to="/customers" class="flex min-h-11 items-center hover:text-violet-300">Customers</NuxtLink></li><li><NuxtLink to="/careers" class="flex min-h-11 items-center hover:text-violet-300">Careers</NuxtLink></li><li><NuxtLink to="/blog" class="flex min-h-11 items-center hover:text-violet-300">Blog</NuxtLink></li><li><NuxtLink to="/contact" class="flex min-h-11 items-center hover:text-violet-300">Contact</NuxtLink></li></ul></nav>
+        <nav aria-label="Resources"><p class="text-sm font-bold uppercase tracking-wider text-neutral-400">Resources</p><ul class="mt-4 space-y-1 text-sm"><li><NuxtLink to="/help" class="flex min-h-11 items-center hover:text-violet-300">Help Center</NuxtLink></li><li><NuxtLink to="/resources" class="flex min-h-11 items-center hover:text-violet-300">Resources</NuxtLink></li><li><NuxtLink to="/roi-calculator" class="flex min-h-11 items-center hover:text-violet-300">ROI Calculator</NuxtLink></li><li><NuxtLink to="/compare" class="flex min-h-11 items-center hover:text-violet-300">Compare</NuxtLink></li><li><NuxtLink to="/faq" class="flex min-h-11 items-center hover:text-violet-300">FAQ</NuxtLink></li><li><NuxtLink to="/trust-center" class="flex min-h-11 items-center hover:text-violet-300">Trust Center</NuxtLink></li><li><NuxtLink to="/status" class="flex min-h-11 items-center hover:text-violet-300">Status</NuxtLink></li><li><NuxtLink to="/security" class="flex min-h-11 items-center hover:text-violet-300">Security</NuxtLink></li></ul></nav>
       </div>
       <div class="border-t border-white/10"><div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-xs text-neutral-400 sm:px-6"><span>© 2026 CloudPilot. Demo site — all copy, prices and testimonials are mock data.</span><span class="flex items-center gap-4"><NuxtLink to="/privacy-policy" class="flex min-h-11 items-center hover:text-white">Privacy</NuxtLink><NuxtLink to="/terms" class="flex min-h-11 items-center hover:text-white">Terms</NuxtLink><NuxtLink to="/cookie-policy" class="flex min-h-11 items-center hover:text-white">Cookies</NuxtLink><NuxtLink to="/sitemap" class="flex min-h-11 items-center hover:text-white">Sitemap</NuxtLink></span></div></div>
     </footer>
@@ -124,6 +124,33 @@ const email = ref('')
 const subscribed = ref(false)
 const scrolled = ref(false)
 const route = useRoute()
+
+// Self-referencing canonical + BreadcrumbList on every page (audit: no
+// canonical tag site-wide, no breadcrumb schema). Names come from the URL
+// segments; visuals are untouched — this is head metadata only.
+const siteUrl = 'https://cloudpilot-saas.pages.dev'
+const canonicalUrl = computed(() => siteUrl + (route.path === '/' ? '/' : route.path))
+const crumbs = computed(() => {
+  const parts = route.path.split('/').filter(Boolean)
+  const items = [{ name: 'Home', url: siteUrl + '/' }]
+  let acc = ''
+  for (const p of parts) {
+    acc += '/' + p
+    items.push({ name: p.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '), url: siteUrl + acc })
+  }
+  return items
+})
+useHead(() => ({
+  link: [{ rel: 'canonical', href: canonicalUrl.value }],
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.value.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.url }))
+    })
+  }]
+}))
 
 // Scroll progress bar (motion-v, spring-smoothed)
 const { scrollYProgress } = useScroll()

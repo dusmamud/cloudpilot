@@ -6,7 +6,7 @@
 </div></section>
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
 <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-<div v-for="b in badges" :key="b.n" class="reveal rounded-3xl border border-neutral-200 bg-white p-6 text-center"><component :is="b.icon" class="mx-auto h-8 w-8 text-violet-600" /><h3 class="mt-3 font-bold">{{b.n}}</h3><p class="mt-1 text-sm text-neutral-600">{{b.d}}</p></div>
+<div v-for="b in badges" :key="b.n" class="reveal rounded-3xl border border-neutral-200 bg-white p-6 text-center"><component :is="b.icon" class="mx-auto h-8 w-8 text-violet-600" /><h2 class="mt-3 font-bold">{{b.n}}</h2><p class="mt-1 text-sm text-neutral-600">{{b.d}}</p></div>
 </div>
 <div class="reveal mt-10 grid gap-5 rounded-3xl bg-violet-600 p-8 text-white sm:grid-cols-3"><div><p class="text-3xl font-extrabold">99.99%</p><p class="mt-1 text-sm text-violet-100">Uptime, trailing 12 months</p></div><div><p class="text-3xl font-extrabold">TLS 1.3 + AES-256</p><p class="mt-1 text-sm text-violet-100">Encryption in transit and at rest</p></div><div><p class="text-3xl font-extrabold">EU + US</p><p class="mt-1 text-sm text-violet-100">Data residency regions</p></div></div>
 <h2 class="reveal mt-14 text-3xl font-extrabold">How we protect your data</h2>

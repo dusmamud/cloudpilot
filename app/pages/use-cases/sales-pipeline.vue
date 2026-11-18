@@ -7,7 +7,7 @@
 </div></section>
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
 <div class="grid gap-5 sm:grid-cols-3">
-<div v-for="(p,i) in pains" :key="p.t" class="reveal rounded-3xl border border-neutral-200 bg-white p-6"><p class="text-sm font-bold text-violet-700">Problem {{i+1}}</p><h3 class="mt-2 text-lg font-bold">{{p.t}}</h3><p class="mt-2 text-sm leading-relaxed text-neutral-600">{{p.d}}</p></div>
+<div v-for="(p,i) in pains" :key="p.t" class="reveal rounded-3xl border border-neutral-200 bg-white p-6"><p class="text-sm font-bold text-violet-700">Problem {{i+1}}</p><h2 class="mt-2 text-lg font-bold">{{p.t}}</h2><p class="mt-2 text-sm leading-relaxed text-neutral-600">{{p.d}}</p></div>
 </div>
 <h2 class="reveal mt-14 text-3xl font-extrabold">How it works</h2>
 <ol class="mt-6 space-y-4">

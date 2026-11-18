@@ -8,8 +8,8 @@
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6"><div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 <article v-for="t in shown" :key="t.name" class="reveal card-hover flex flex-col rounded-3xl border border-neutral-200 bg-white p-6">
 <span class="grid h-12 w-12 place-items-center rounded-2xl bg-violet-100 text-violet-700"><component :is="t.icon" class="h-6 w-6" /></span>
-<h3 class="mt-4 text-lg font-bold">{{t.name}}</h3><p class="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{{t.desc}}</p>
-<p class="mt-4 text-xs font-semibold uppercase tracking-wider text-neutral-400">{{t.cat}} · Used by {{t.uses}} teams</p>
+<h2 class="mt-4 text-lg font-bold">{{t.name}}</h2><p class="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{{t.desc}}</p>
+<p class="mt-4 text-xs font-semibold uppercase tracking-wider text-neutral-600">{{t.cat}} · Used by {{t.uses}} teams</p>
 <NuxtLink to="/signup" class="btn btn-outline-dark mt-4 w-full">Use template <ArrowRight class="h-4 w-4" /></NuxtLink>
 </article>
 </div>

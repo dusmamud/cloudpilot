@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* Self-hosted Inter (variable font, latin subset, 48 KB) — replaces the
+   Google Fonts external stylesheet, which was render-blocking (~730ms on
+   mobile) and added two extra origins. font-display: swap keeps text
+   visible while the font loads. Weights 100-900 come from the one file. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter-var.woff2") format("woff2");
+}
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --color-violet-brand: #7c3aed;

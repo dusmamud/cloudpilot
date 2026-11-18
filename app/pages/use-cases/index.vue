@@ -7,7 +7,7 @@
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6"><div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 <NuxtLink v-for="u in cases" :key="u.to" :to="u.to" class="reveal card-hover group block rounded-3xl border border-neutral-200 bg-white p-6">
 <span class="grid h-12 w-12 place-items-center rounded-2xl bg-violet-100 text-violet-700"><component :is="u.icon" class="h-6 w-6" /></span>
-<h3 class="mt-4 text-lg font-bold group-hover:text-violet-700">{{u.name}}</h3><p class="mt-2 text-sm leading-relaxed text-neutral-600">{{u.desc}}</p>
+<h2 class="mt-4 text-lg font-bold group-hover:text-violet-700">{{u.name}}</h2><p class="mt-2 text-sm leading-relaxed text-neutral-600">{{u.desc}}</p>
 <p class="mt-4 text-sm font-bold text-violet-700">Saves {{u.saves}} <ArrowRight class="inline h-4 w-4 transition group-hover:translate-x-1" /></p>
 </NuxtLink>
 </div>
