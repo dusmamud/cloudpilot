@@ -75,6 +75,7 @@ const pages = [
 { name: 'About', to: '/about', desc: 'Who builds CloudPilot', group: 'Company' },
 { name: 'Careers', to: '/careers', desc: 'Join the team', group: 'Company' },
 { name: 'Contact', to: '/contact', desc: 'Talk to a human', group: 'Company' },
+{ name: 'Press', to: '/press', desc: 'Press kit, releases and media', group: 'Company' },
 { name: 'Sign in', to: '/login', desc: 'Back to your workspace', group: 'Account' },
 ]
 const results = computed(() => {
